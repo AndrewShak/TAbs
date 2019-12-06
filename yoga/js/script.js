@@ -39,6 +39,32 @@ window.addEventListener('DOMContentLoaded', function () {
     let deadline = "2020-01-31"
 
     function getTimeRemaning(endtume){
-        let t
+        let t = Date.parse(endtume) - Date.parse(new Date()),       // получаем переменную оставшегося времени 
+        seconds = Math.floor((t / 1000) % 60),                  // Math.floor - получаем целлое округленное значение
+        minutes = Math.floor((t / 1000/60) % 60 ),                      //при помощи % получаем секунды оставшиеся до минуты
+        hours = Math.floor((t/(1000*60*60)));
+        // hours = Math.floor((t/1000/60/60) % 24);         // При данном раскладе добавляется остатки дней
+        // days = Math.floor((t/(1000*60*60*24))
+
+        return {
+            'total': t,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+        };
     }
+
+    function setClock(id, endtume){
+        let timer = document.getElementById(id),
+            hours = timer.querySelector('.hours'),
+            minutes = timer.querySelector('.minutes'),
+            seconds = timer.querySelector('.seconds');
+
+        function updateClock() {
+            let t = getTimeRemaning()
+        }
+    }
+
+
+    setClock('timer', deadline);
 });
