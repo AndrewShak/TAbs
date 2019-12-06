@@ -33,4 +33,12 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+
+    // Timer
+
+    let deadline = "2020-01-31"
+
+    function getTimeRemaning(endtume){
+        let t
+    }
 });
