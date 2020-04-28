@@ -107,9 +107,9 @@ window.addEventListener('DOMContentLoaded', function () {
     // Form
 
     let message = {
-        loading: 'Р—Р°РіСЂСѓР·РєР°...',
-        success: 'РЎРїР°СЃРёР±Рѕ! РЎРєРѕСЂРѕ РјС‹ СЃ РІР°РјРё СЃРІСЏР¶РµРјСЃСЏ!',
-        failure: 'Р§С‚Рѕ-С‚Рѕ РїРѕС€Р»Рѕ РЅРµ С‚Р°Рє...'
+        loading: 'Загрузка...',
+        success: 'Ваша заявка принята! В ближайшее время мы с Вами свяжемся',
+        failure: 'Что-то пошло не так...'
     };
 
     let form = document.querySelector('.main-form'),
